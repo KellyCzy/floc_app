@@ -1,5 +1,3 @@
-
-
 # Written by Richard Yu (ry275@cornell.edu)
 
 import sys
@@ -84,6 +82,7 @@ def count_and_size_flocs(img):
         description = "There is GREATER THAN a 20% discrepancy between the sum of individual near-white pixel counts and the total count of non-black pixels! There are many non-black AND non-near-white pixels!"
     else:
         description = "There is LESS THAN a 20% discrepancy between the sum of individual near-white pixel counts and the total count of non-black pixels."
+    # print(description)
     return flocAreas
 
 
@@ -143,4 +142,8 @@ def whitePixelAreas(i_flocBounds, j_flocBounds, img):
     return flocAreas
 
 
+# count_and_size_flocs("white.jpg")
+
 # Example usage
+# img = cv2.imread("1.jpg")
+# print(count_and_size_flocs(img))

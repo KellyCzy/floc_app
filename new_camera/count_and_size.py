@@ -24,6 +24,7 @@ def whitePixels(grid):
 
 def nonBlackPixels(img):
     return cv2.countNonZero(img)
+    # perhaps only count zero pixels as black pixels are too strict?
 
 
 # Returns: scales down img's [i],[j] dimensions by a factor of 5, effectively shrinking the image to 1/25 its original size
@@ -84,6 +85,7 @@ def count_and_size_flocs(img):
     else:
         description = "There is LESS THAN a 20% discrepancy between the sum of individual near-white pixel counts and the total count of non-black pixels."
     # return islands, flocAreas, nonBlacks, description
+    print(description)
     return flocAreas
 
 
@@ -144,5 +146,5 @@ def whitePixelAreas(i_flocBounds, j_flocBounds, img):
 
 
 # # Example usage
-# img = cv2.imread("image.jpg")
-# print(count_and_size_flocs(img))
+img = cv2.imread("1.jpg")
+print(count_and_size_flocs(img))
